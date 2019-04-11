@@ -2,13 +2,16 @@ import numpy as np
 
 def detecte_ouliers(f,df, r=1.5,  delete_outliers=False):
     """
-        Removing outliers from the selected feature.
+        Remove outliers from the selected feature.
         Params:
             f: a string representing the name of the feature
             df: a DataFrame object representing the data
             r: a float representing the size of the cut_off
             delete_outliers: a boolean which let one choose whether or not
                 to delete the outliers found
+        Output:
+            s_outliers: an array containing the outliers
+            new_df: the new DataFrame object
     """
     # a new DataFrame resulting from the outliers deletion
     new_df = None
